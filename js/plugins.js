@@ -608,6 +608,7 @@
                 ,'text-align' : 'center'
                 ,'color' : this.o.inputColor || this.o.fgColor
                 ,'padding' : '0px'
+                ,'outline' : 0
                 ,'-webkit-appearance': 'none'
             })
             || this.i.css({
@@ -659,6 +660,14 @@
                 c.arc(this.xy, this.xy, this.radius, sa, ea, false);
                 c.stroke();
                 r = (this.cv == this.v);
+            }
+
+            if(sat < this.startAngle){
+                sat = this.startAngle;
+            }
+
+            if(eat > this.endAngle){
+                eat = this.endAngle;
             }
 
             c.beginPath();
