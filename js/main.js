@@ -1,9 +1,10 @@
 $(function () {
     $(".dial").knob({
-        fgColor: '#08C9C6',
-        bgColor: '#CCCCCC',
-        angleOffset: -125,
-        angleArc: 250,
+        fgColor: '#D9FF00',
+        bgColor: '#FCFFEB',
+        inputColor: '#FCFFEB',
+        angleOffset: -80,
+        angleArc: 160,
         min: 0,
         max: 100,
         width: 240,
