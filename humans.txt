@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    James Ford -- Lead Developer -- @psyked_james
 
 # THANKS
 
-    <name>
+    Leonie Dell
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     Normalize.css, jQuery, Modernizr
+    jQuery Knob Plugin
