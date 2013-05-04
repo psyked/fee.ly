@@ -1,14 +1,14 @@
 $(function () {
     $(".dial").knob({
-        fgColor: '#D9FF00',
+        fgColor: '#08C9C6',
         bgColor: '#FCFFEB',
-        inputColor: '#FCFFEB',
         angleOffset: -80,
         angleArc: 160,
         min: 0,
         max: 100,
-        width: 240,
-        height: 240,
-        cursor: 20
+        width: 280,
+        height: 280,
+        cursor: 40,
+        displayInput: false
     });
 });
