@@ -214,8 +214,8 @@
             var d = true,
                 c = document.createElement('canvas');
 
-            c.width = s.o.width;
-            c.height = s.o.height;
+            c.width = s.o.width * window.devicePixelRatio;
+            c.height = s.o.height * window.devicePixelRatio;
             s.g = c.getContext('2d');
 
             s.clear();
