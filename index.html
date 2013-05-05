@@ -14,6 +14,10 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <link type="text/css" rel="stylesheet" media="screen" href="css/sidetap.css" />
+        <link type="text/css" rel="stylesheet" media="screen" href="css/theme/default/default.css" />
+
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -22,14 +26,52 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="content">
-            <input type="text" value="50" class="dial">
+
+        <div class="sidetap">
+            <div class="stp-nav">
+                <div>
+                    <nav>
+                        <a href="#" class="selected">Selected Nav Item</a>
+                        <a href="#">Second Nav Item</a>
+                        <a href="#">Third Nav Item</a>
+                        <a href="#">Fourth Nav Item</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="stp-content" id="content">
+                <header class="stp-fake-header">&nbsp;</header>
+                <div class="stp-overlay nav-toggle">&nbsp;</div>
+
+                <!-- Content Divs Look Like This -->
+                <div class="stp-content-panel">
+                    <header>
+                        <a href="javascript:void(0)" class="header-button icon menu"><span>Menu</span></a>
+                        <h1>Fee.ly</h1>
+                    </header>
+                    <div class="stp-content-frame">
+                        <div class="stp-content-body">
+                            <div class="container">
+                                <div class="content">
+                                    <input type="text" value="50" class="dial">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End content Div -->
+            </div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/sidetap.js"></script>
+        <script>
+            var st = sidetap();
+            $(".header-button.menu").on("click",st.toggle_nav)
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
