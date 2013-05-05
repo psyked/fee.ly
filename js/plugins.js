@@ -174,9 +174,19 @@
             (!this.o.displayInput) && this.$.hide();
 
             this.$c = $('<canvas width="' +
-                this.o.width + 'px" height="' +
+                this.o.width + '" height="' +
+                this.o.height + '" style="width:' +
+                this.o.width + 'px;height:' +
                 this.o.height + 'px"></canvas>');
             this.c = this.$c[0].getContext("2d");
+
+            this.devicePixelRatio = window.devicePixelRatio || 1;
+            this.backingStoreRatio = this.c.webkitBackingStorePixelRatio ||
+                this.c.mozBackingStorePixelRatio ||
+                this.c.msBackingStorePixelRatio ||
+                this.c.oBackingStorePixelRatio ||
+                this.c.backingStorePixelRatio || 1;
+            this.ratio = this.devicePixelRatio / this.backingStoreRatio;
 
             this.$
                 .wrap($('<div style="' + (this.o.inline ? 'display:inline;' : '') +
@@ -214,8 +224,8 @@
             var d = true,
                 c = document.createElement('canvas');
 
-            c.width = s.o.width * window.devicePixelRatio;
-            c.height = s.o.height * window.devicePixelRatio;
+            c.width = s.o.width * this.ratio;
+            c.height = s.o.height * this.ratio;
             s.g = c.getContext('2d');
 
             s.clear();
